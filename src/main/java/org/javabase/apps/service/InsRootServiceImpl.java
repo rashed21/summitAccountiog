@@ -30,6 +30,12 @@ public class InsRootServiceImpl implements InsRootService {
 		installmentRootMapper.addInsRoot(installmentRoot);
 		
 	}
+
+	@Override
+	@Transactional(readOnly=true)
+	public List<InstallmentRoot> getInstallmentRoots() {
+		return installmentRootMapper.getInstallmentRoots();
+	}
 	
 	
 }

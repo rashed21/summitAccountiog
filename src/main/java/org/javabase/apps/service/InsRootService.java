@@ -16,4 +16,6 @@ import org.javabase.apps.entity.Role;
 public interface InsRootService {
 	
 	void addInsRoot(InstallmentRoot installmentRoot);
+	
+	List<InstallmentRoot> getInstallmentRoots();
 }

@@ -4,6 +4,7 @@
 package org.javabase.apps.entity;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * @author  Md. Rashedunnabi <rashedunnabi21@gmail.com>
@@ -21,24 +22,47 @@ public class InstallmentRoot implements Serializable{
 	
 	private String rootName;
 	
-	private String amount;
+	private Double amount;
 	
 	private String duration;
 	
-	private String fineRate;
+	private Double fineRate;
 	
-	private String createDate;
+	private Date createDate;
 	
-	private String modifyDate;
+	private Date modifyDate;
 
 	
-	
-	public String getFineRate() {
+	public Double getAmount() {
+		return amount;
+	}
+
+	public void setAmount(Double amount) {
+		this.amount = amount;
+	}
+
+	public Double getFineRate() {
 		return fineRate;
 	}
 
-	public void setFineRate(String fineRate) {
+	public void setFineRate(Double fineRate) {
 		this.fineRate = fineRate;
+	}
+
+	public Date getCreateDate() {
+		return createDate;
+	}
+
+	public void setCreateDate(Date createDate) {
+		this.createDate = createDate;
+	}
+
+	public Date getModifyDate() {
+		return modifyDate;
+	}
+
+	public void setModifyDate(Date modifyDate) {
+		this.modifyDate = modifyDate;
 	}
 
 	public int getInstallRootID() {
@@ -57,14 +81,6 @@ public class InstallmentRoot implements Serializable{
 		this.rootName = rootName;
 	}
 
-	public String getAmount() {
-		return amount;
-	}
-
-	public void setAmount(String amount) {
-		this.amount = amount;
-	}
-
 	public String getDuration() {
 		return duration;
 	}
@@ -73,20 +89,5 @@ public class InstallmentRoot implements Serializable{
 		this.duration = duration;
 	}
 
-	public String getCreateDate() {
-		return createDate;
-	}
-
-	public void setCreateDate(String createDate) {
-		this.createDate = createDate;
-	}
-
-	public String getModifyDate() {
-		return modifyDate;
-	}
-
-	public void setModifyDate(String modifyDate) {
-		this.modifyDate = modifyDate;
-	}
 
 }

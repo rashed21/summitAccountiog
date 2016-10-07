@@ -3,7 +3,6 @@ package org.javabase.apps.mapper;
 import java.util.List;
 
 import org.javabase.apps.entity.InstallmentRoot;
-import org.javabase.apps.entity.InstallmentRoot;
 
 /**
  * @author  Saurav Wahid<swahidfx@gmail.com>
@@ -13,5 +12,7 @@ import org.javabase.apps.entity.InstallmentRoot;
 public interface InstallmentRootMapper {
 	
 	void addInsRoot(InstallmentRoot installmentRoot);
+	
+	List<InstallmentRoot> getInstallmentRoots();
 
 }

@@ -21,9 +21,9 @@
         <result property="modify_date"  column="modifyDate" />
     </resultMap>
     
- <!--    <select id="getAllInsRoot" resultMap="roleList">
+    <select id="getInstallmentRoots" resultMap="list">
         select * from install_root
-    </select> -->
+    </select>
     
       <insert id="addInsRoot" parameterType="InstallmentRoot">
     INSERT INTO install_root(

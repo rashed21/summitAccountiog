@@ -1,5 +1,7 @@
 package org.javabase.apps.controller;
 
+import java.util.List;
+
 import org.javabase.apps.entity.InstallmentRoot;
 import org.javabase.apps.service.InsRootService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,8 +21,10 @@ public class InstallmetnRootController {
 	@RequestMapping(method = RequestMethod.GET)
     public ModelAndView installMent(ModelMap m,  ModelAndView mv){
         
+		List<InstallmentRoot> insRootList=insrootservice.getInstallmentRoots();
         m.put("installRoot", new InstallmentRoot());
         ModelAndView model = new ModelAndView("installRoot");
+        model.addObject("installRootList", insRootList);
         return model;
         
     }
@@ -32,6 +36,12 @@ public class InstallmetnRootController {
 	        return "redirect:/installRoot";
 	    }
 	   
+	   
+	/*   
+	   List<ProductColor> productColorList=productColorService.selectProductColor();
+       m.put("color", new ProductColor());
+       ModelAndView model = new ModelAndView("productColor");
+       model.addObject("colorList", productColorList);*/
 /*	@ResponseBody
 	@RequestMapping(value="/addInstallRoot", method = RequestMethod.POST)
 	public Map<String, Object> registration(@RequestBody InstallmentRoot installmentRoot) {
