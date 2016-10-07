@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+    <!-- 
+    ================================================================================
+    @author     Saurav Wahid<saurav1161@gmail.com>
+    @web        www.javabase.org
+    @version    1.0.1
+    @since      1.0.0
+    ================================================================================
+    -->
+<mapper namespace="org.javabase.apps.mapper.InstallmentRootMapper">
+	<cache />
+    <resultMap id="list" type="InstallmentRoot">
+        <result property="name"         column="rootName" />
+        <result property="amount"       column="amount" />
+        <result property="duration"     column="duration" />
+        <result property="fine_rate"    column="fineRate" />
+        <result property="creat_date"   column="createDate" />
+        <result property="modify_date"  column="modifyDate" />
+    </resultMap>
+    
+ <!--    <select id="getAllInsRoot" resultMap="roleList">
+        select * from install_root
+    </select> -->
+    
+      <insert id="addInsRoot" parameterType="InstallmentRoot">
+    INSERT INTO install_root(
+        name,
+        amount,
+        duration,
+        fine_rate,
+        creat_date,
+        modify_date
+    )
+    values(
+        #{rootName},
+        #{amount},
+        #{duration},
+        #{fineRate},
+        #{createDate},
+        #{modifyDate}
+    )
+    </insert>
+    
+</mapper>
