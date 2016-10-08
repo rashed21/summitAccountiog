@@ -152,7 +152,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
           <!-- Sidebar Menu -->
           <ul class="sidebar-menu">
-            <li class="active"><a href="${index}"><i class="fa fa-link"></i> <span>Dashboard</span></a></li>
+            <li class="active"><a href="member"><i class="fa fa-link"></i> <span>Dashboard</span></a></li>
             <li class="active"><a href="installRoot"><i class="fa fa-link"></i> <span>Install Root</span></a></li>
 <!--             <li class="treeview">
               <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span> <i class="fa fa-angle-left pull-right"></i></a>

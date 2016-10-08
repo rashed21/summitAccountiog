@@ -13,12 +13,13 @@
 <mapper namespace="org.javabase.apps.mapper.InstallmentRootMapper">
 	<cache />
     <resultMap id="list" type="InstallmentRoot">
-        <result property="name"         column="rootName" />
-        <result property="amount"       column="amount" />
-        <result property="duration"     column="duration" />
-        <result property="fine_rate"    column="fineRate" />
-        <result property="creat_date"   column="createDate" />
-        <result property="modify_date"  column="modifyDate" />
+        <result property="installRootID"         column="r_id" />
+        <result property="rootName"         column="name" />
+        <result property="amount"           column="amount" />
+        <result property="duration"         column="duration" />
+        <result property="fineRate"         column="fine_rate" />
+        <result property="createDate"       column="creat_date" />
+        <result property="modifyDate"       column="modify_date" />
     </resultMap>
     
     <select id="getInstallmentRoots" resultMap="list">

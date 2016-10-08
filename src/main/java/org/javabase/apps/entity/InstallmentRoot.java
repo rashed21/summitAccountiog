@@ -33,6 +33,7 @@ public class InstallmentRoot implements Serializable{
 	private Date modifyDate;
 
 	
+	
 	public Double getAmount() {
 		return amount;
 	}

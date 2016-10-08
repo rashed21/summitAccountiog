@@ -10,9 +10,9 @@
     @since      1.0.0
     ================================================================================
     -->
-<mapper namespace="org.javabase.apps.mapper.UserMapper">
+<mapper namespace="org.javabase.apps.mapper.MemberMapper">
 	<cache />
-    <resultMap id="userList" type="User">
+    <resultMap id="memberList" type="Member">
         <result property="userid"     column="userid" />
         <result property="roleid"     column="roleid" />
         <result property="rolename"    column="rolename" />
@@ -27,13 +27,14 @@
         <result property="isnonexpired"    column="isnonexpired" />
         <result property="isnonlocked"    column="isnonlocked" />
         <result property="expDate"    column="expdate" />
+        <result property="installRoot"    column="r_id" />
     </resultMap>
     
-    <select id="getAllUsers" resultMap="userList">
+    <select id="getAllMembers" resultMap="memberList">
         select * from member
     </select>
     
-    <insert id="addUser" parameterType="User">
+    <insert id="addMember" parameterType="Member">
     INSERT INTO member(
         userid,
         roleid,
@@ -45,6 +46,7 @@
         isactive,
         isnonexpired,
         isnonlocked,
+        r_id,
         regdate
     )
     values(
@@ -58,13 +60,14 @@
         #{isactive},
         #{isnonexpired},
         #{isnonlocked},
+        #{installRoot},
         #{regdate}
     )
     </insert>
-    <select id="getUserByUsername" resultType="User" parameterType="String">
+    <!-- <select id="getMemberByMembername" resultType="Member" parameterType="String">
     	select m.*, r.rolename as rolename from member m
     	join role r on r.roleid = m.roleid
     	where m.username =#{username}
-    </select>
+    </select> -->
     
 </mapper>
