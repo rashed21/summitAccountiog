@@ -28,9 +28,8 @@ public class MemberServiceImpl implements MemberService {
 
 	@Override
 	@Transactional(readOnly=true)
-	public Member getMemberByMembername(String membername) {
-		// TODO Auto-generated method stub
-		return null;
+	public  Member getMemberByMemberContact(String memberContact) {
+		return memberMapper.getMemberByMemberContact(memberContact);
 	}
 
 	@Override

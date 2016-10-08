@@ -14,7 +14,7 @@ public interface MemberMapper {
 	
 	List<Member> getAllMembers();
 	Member getMemberById(int memberId);
-	Member getMemberByMembername(String membername);
+	Member getMemberByMemberContact(String memberContact);
     void addMember(Member member);
     void updateMember(Member member);
     void deleteMember(int memberId);

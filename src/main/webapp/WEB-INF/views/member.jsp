@@ -4,7 +4,7 @@
 	
 	<jsp:body>
 	
-	<h1>Member Registration Form> </h1>
+	<h3>Member Registration Form</h3>
 	<c:url var="action" value="member/add" />
                    <form:form action="${action}" method="post" commandName="member" class="form-horizontal">
                    
@@ -14,7 +14,7 @@
                              <form:input path="username"
                             class="form-control" />
                         </div>
-                  </div>
+                  </div>z
                   <div class="form-group">
                      <label class="col-sm-2 control-label">Password</label>
                         <div class="col-sm-4">

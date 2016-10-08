@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+    <!-- 
+    ================================================================================
+    @author     Saurav Wahid<saurav1161@gmail.com>
+    @web        www.javabase.org
+    @version    1.0.1
+    @since      1.0.0
+    ================================================================================
+    -->
+<mapper namespace="org.javabase.apps.mapper.SavingsMapper">
+	<cache />
+    <resultMap id="savingsList" type="Savings">
+        <result property="savingsId"     column="savings_id" />
+        <result property="memberIb"      column="member_id" />
+        <result property="amount"        column="amount" />
+        <result property="month"         column="month" />
+        <result property="date"          column="date" />
+        <result property="fineAmount"    column="fine_amount" />
+    </resultMap>
+    
+    <select id="getAllSavingss" resultMap="savingsList">
+        select * from savings
+    </select>
+    
+    <insert id="addSavings" parameterType="Savings">
+    INSERT INTO savings(
+        savings_id,
+        member_id,
+        amount,
+        month,
+        date,
+        fine_amount
+    )
+    values(
+        #{savingsId},
+        #{memberIb},
+        #{amount},
+        #{month},
+        #{date},
+        #{fineAmount}
+    )
+    </insert>
+    
+</mapper>

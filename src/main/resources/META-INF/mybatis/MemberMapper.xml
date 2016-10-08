@@ -40,6 +40,7 @@
         roleid,
         username,
         password,
+        phone,
         email,
         firstname,
         lastname,
@@ -54,6 +55,7 @@
         #{roleid},
         #{username},
         #{password},
+        #{phone},
         #{email},
         #{firstName},
         #{lastName},
@@ -64,10 +66,9 @@
         #{regdate}
     )
     </insert>
-    <!-- <select id="getMemberByMembername" resultType="Member" parameterType="String">
-    	select m.*, r.rolename as rolename from member m
-    	join role r on r.roleid = m.roleid
-    	where m.username =#{username}
-    </select> -->
+    <select id="getMemberByMemberContact" resultType="Member" parameterType="String">
+    	select * from member 
+    	where phone =#{phone}
+    </select>
     
 </mapper>
